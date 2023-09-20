@@ -1,0 +1,71 @@
+<div class="page-title">Edit Product</div>
+
+
+<div class="alert alert-success" *ngIf="productEdited">Product details saved successfully.</div>
+
+<form [formGroup]="editForm" (submit)="onSubmitEditForm()" *ngIf="!productEdited">
+  <div class="form-row">
+    <div class="form-group col-12 col-lg-12">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" formControlName="title">
+      <div class="validation-error" *ngIf="editForm.get('title').touched && editForm.get('title').hasError('required')">
+        Title is required</div>
+      <div class="validation-error"
+        *ngIf="editForm.get('title').touched && editForm.get('title').hasError('maxlength')">Title cannot exceed 200
+        characters</div>
+    </div>    
+    <div class="form-group col-12 col-lg-12">
+      <label for="image">Photo URL</label>
+      <input type="text" class="form-control" id="title" formControlName="imageUrl">
+      <div class="validation-error" *ngIf="editForm.get('imageUrl').touched && editForm.get('imageUrl').hasError('required')">
+        Photo URL is required</div>
+     </div>
+    <div class="form-group col-12 col-lg-3">
+      <label for="price">Price</label>
+      <input type="text" class="form-control" id="price" formControlName="price">
+      <div class="validation-error" *ngIf="editForm.get('price').touched && editForm.get('price').hasError('required')">
+        Price is required</div>
+      <div class="validation-error" *ngIf="editForm.get('price').touched && editForm.get('price').hasError('pattern')">
+        Price can only contain numbers.</div>
+    </div>
+    <div class="form-group col-12 col-lg-3">
+      <label for="dateOfExpiry">Date of Expiry</label>
+      <input type="date" class="form-control" id="dateOfExpiry" formControlName="expiryDate">
+    </div>
+    <div class="form-group col-12 col-lg-3">
+      <label for="category">Category</label>
+      <select class="form-control" id="category" formControlName="category">
+        <option></option>
+        <option>Electronics</option>
+        <option>Mobiles</option>
+        <option>Movies & Music</option>
+        <option>Snacks</option>
+        <option>Books</option>
+      </select>
+      <div class="validation-error"
+        *ngIf="editForm.get('category').touched && editForm.get('category').hasError('required')">Category is required
+      </div>
+    </div>
+    <div class="form-group col-12 col-lg-3">
+      <div>In Stock</div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inStock" formControlName="inStock" id="inStock1" value="yes">
+        <label class="form-check-label" for="inStock1">Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inStock" formControlName="inStock" id="inStock2" value="no">
+        <label class="form-check-label" for="inStock2">No</label>
+      </div>
+      <div class="validation-error"
+        *ngIf="editForm.get('inStock').hasError('required')">Select in stock status.
+      </div>
+    </div>
+    <div class="form-group col-12 col-lg-">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" formControlName="isDeliveryFree" id="freeDelivery" value="1">
+        <label class="form-check-label" for="freeDelivery">Free Delivery</label>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!editForm.valid">Save</button>
+</form>

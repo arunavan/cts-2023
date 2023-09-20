@@ -1,0 +1,54 @@
+<div class="block">
+  <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+    <strong>Edit Employee</strong><br><br>
+    <div>
+      <label for="name"><strong>Name</strong></label><br>
+      <input type="text" formControlName="name" /><br>
+      <div *ngIf="name.invalid && (name.touched || name.dirty)" class="text-error">
+        <small *ngIf="name.errors.required">Name is required.</small>
+        <small *ngIf="name.errors.minlength">
+          Name must be at least 4 characters long.
+        </small>
+        <small *ngIf="name.errors.maxlength">
+          Name must not be more than 20 characters long.
+        </small>
+      </div>
+      <br/>
+    </div>
+    <div>
+      <label for="salary"><strong>Salary</strong></label><br/>
+      <input type="text" formControlName="salary" />
+      <div *ngIf="salary.invalid && (salary.touched || salary.dirty)" class="text-error">
+        <small *ngIf="salary.errors.required">Salary is required.</small>
+      </div>
+      <br/><br/>
+    </div>    
+    <div>
+      <label><strong>Is Permanent or not?</strong></label><br/>
+      <input formControlName="permanent" type="radio" name="permanent" id="permanentYes" value="Yes">
+      <label for="permanentYes">Yes</label>
+      <input formControlName="permanent" type="radio" name="permanent" id="permanentNo" value="No">
+      <label for="permanentNo">No</label>
+      <br/><br/>
+    </div>
+    <div formGroupName="department">
+      <label for="departments"><strong>Department</strong></label><br/>
+      <select formControlName="id" [ngModel]="employee.department.id">
+        <option *ngFor="let department of departments" [value]="department.id"
+            [selected]="employee.department.id == department.id">
+          {{department.name}}
+        </option>
+      </select>
+      <br/><br/>
+    </div>    
+    <button type="submit" [disabled]="!empForm.valid">Save</button>
+  </form>
+</div>
+<div class="block">
+  <strong>Employee Model</strong><br>
+  <pre>{{employee | json }}</pre>
+</div>
+<div class="block">
+  <strong>Angular Generated Form Model</strong><br>
+  <pre>{{empForm.value | json}}</pre>
+</div>

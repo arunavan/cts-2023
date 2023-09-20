@@ -1,0 +1,10 @@
+<div class="employee-card">
+  <div>
+    <span class="employee-name">{{employee.name}}</span>
+    <br/>
+    <span id="empName">{{employee.salary | currency:'INR':'symbol'}}</span>
+  </div>
+  <div>
+    <a [routerLink]="['/edit-emp',employee.id]">Edit</a>
+  </div>
+</div>

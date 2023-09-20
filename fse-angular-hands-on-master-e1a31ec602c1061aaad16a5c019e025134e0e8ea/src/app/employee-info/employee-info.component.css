@@ -1,0 +1,11 @@
+.employee-card {
+    border: 1px solid blue;
+    margin: 5px;
+    padding: 5px;
+    float:left;
+    width:30%;
+}
+
+.employee-name {
+    font-size: 25px;
+}

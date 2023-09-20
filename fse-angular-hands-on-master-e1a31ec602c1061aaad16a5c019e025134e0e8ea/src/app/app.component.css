@@ -1,0 +1,23 @@
+body {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif
+}
+
+a:visited {
+    color: blue
+}
+
+a {
+    text-decoration: none
+}
+
+.active-link {
+    border-bottom: Solid 1px blue
+}
+
+label {
+    font-weight: 800
+}
+
+.float-right{
+    float: right;
+}

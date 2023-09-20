@@ -1,0 +1,130 @@
+.material-icons { 
+    vertical-align: middle
+}
+
+.logo {
+    color: lightgray
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 8px
+}
+
+body {
+    font-family: 'Encode Sans'
+}
+
+.offer {
+    font-size: 20px;
+    color: #ad3d3d
+}
+
+.rating {
+    font-size: 11px
+}
+
+.favorite {
+    font-size: 25px;
+    color: grey;
+}
+
+.favorite:hover {
+    font-size: 25px;
+    color: #FF0000;
+    cursor: pointer
+}
+
+.same-day-shipping {
+    font-size: 25px;
+    color: #AAAAAA
+}
+
+.search-container {
+    background-image: url("https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80");
+}
+
+.search-title {
+    color: #777777;
+    font-size: 40px;
+    font-weight: 300
+}
+
+.product-title {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #777777
+}
+
+.category {
+    font-size: 13px;
+    color: darkgrey;
+}
+
+.price {
+    font-size: 18px;
+    color: darkred;
+    font-weight: 500;
+    margin-bottom: 5px
+}
+
+.price-cart {
+    font-size: 15px;
+    color: darkred;
+    font-weight: 500;
+    margin-bottom: 5px
+}
+
+.cart-delete {
+    font-size: 25px;
+    color: #AAA;
+    cursor: pointer;
+    float: right
+}
+
+.instock {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px
+}
+
+.expiry-date {
+    font-size: 13px;
+    font-weight: 400;
+    color: darkgrey;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.free-shipping {
+    font-size: 14px;
+    color: darkblue
+}
+
+.card {
+    margin-bottom: 10px
+}
+
+.copyright {
+    color: white
+}
+
+.alert-msg {
+    font-size: 12px
+}
+
+.validation-error {
+    color: red;
+    font-size: 10px
+}
+
+.edit-icon {
+    font-size: 16px
+}
+
+.edit-product-mb {
+    margin-bottom: 200px
+}

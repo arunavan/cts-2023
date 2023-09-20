@@ -1,0 +1,17 @@
+<body>
+<nav>
+    <span><strong>Angular Learning</strong></span>&nbsp;
+    <small>
+        <a routerLink="/login" routerLinkActive="active-link">Login</a>&nbsp;
+        <a routerLink="/view-emp" routerLinkActive="active-link">View Employee</a>&nbsp;
+        <a routerLink="/employee-list" routerLinkActive="active-link">Employees</a>&nbsp;
+        <a routerLink="/edit-emp/1" routerLinkActive="active-link">Edit Employee</a>&nbsp;
+        <a routerLink="/edit-emp-template" routerLinkActive="active-link">Edit Employee - Template</a>&nbsp;
+        <a routerLink="/quantity-increment" routerLinkActive="active-link">Quantity Increment</a>&nbsp;
+        <a routerLink="/test-service" routerLinkActive="active-link">Test service</a>&nbsp;
+        <a routerLinkActive="active-link" class="float-right" (click)="onLogoutClick()" >Log out</a>&nbsp;
+    </small>
+</nav>
+<hr>
+<router-outlet></router-outlet>
+</body>
